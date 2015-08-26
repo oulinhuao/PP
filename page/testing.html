@@ -7,105 +7,190 @@
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
 		<title>评测</title>
 		<!--标准mui.css-->
-		<link rel="stylesheet" href="../css/mui.css">
+		<link rel="stylesheet" href="../css/mui.css"/>
+		<link rel="stylesheet" href="../css/head.css"/>
 		
-		<style type="text/css">
-			body{
-				background-color: #f0eff5;
-				background-size: cover;
-				height: 100%;
-				width: 100%;
-				-webkit-overflow-scrolling: auto;
-			}
-			html,body{
-				margin:0px; 
-				height:100%; 
-			}
-			
-			.mui-slider,.mui-content{
-				top: 0px;
+		
+		<style>
+			.mui-control-content {
+				background-color: white;
+				min-height: 100px;
 				bottom: 0px;
-				height: 100%;
-				overflow: hidden;
 			}
-			
-			.mui-slider-group{
-				height: 100%;
+			.mui-control-content .mui-loading {
+				margin-top: 50px;
 			}
-			
-			.mui-control-item.mui-active{
-				background-color: #FF0000;
-			}
-			.space{
-				margin-top: 20px;
-				margin-bottom: 20px;
-			}
-			
 			
 		</style>
-		
 	</head>
 	<body>
-		<div class="mui-content">
+		
+		<div id="layout_title" class="layout_title">
+			
+			<img id="img_title_bg" class="img_title_bg layout_absolute" src="../image/main_title.jpg" />
+			
+			<div class="layout_head layout_absolute">
+				<a> <img id="img_head" src="../image/icon_head.png" /></a>
+				<br>
+				<a class="txt_name">超人的超</a>
+			</div>
+		</div>
+		<!--占位-->
+		<img class="img_title_bg" src="../image/main_title.jpg" />
+		
+		<div id="mui-content" class="mui-content">
+			
 			<div id="slider" class="mui-slider">
 				<div id="sliderSegmentedControl" class="mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
-					<a class="mui-control-item space" href="#item1mobile">
+					<a class="mui-control-item" href="#item1mobile">
 						我的性格（4）
 					</a>
-					<a class="mui-control-item space" href="#item2mobile">
+					<a class="mui-control-item" href="#item2mobile">
 						我的正能量（8）
 					</a>
-					<a class="mui-control-item space" href="#item3mobile">
+					<a class="mui-control-item" href="#item3mobile">
 						我的负能量（3）
 					</a>
+			</div>
+			
+			<div id="sliderProgressBar" class="mui-slider-progress-bar mui-col-xs-4"></div>
+			<div class="mui-slider-group">
+				<div id="item1mobile" class="mui-slider-item mui-control-content mui-active">
+					<div id="scroll1" class="mui-scroll-wrapper">
+						<div class="mui-scroll">
+							<ul class="mui-table-view">
+								<li class="mui-table-view-cell">
+									第一个选项卡子项-1
+								</li>
+								<li class="mui-table-view-cell">
+									第一个选项卡子项-2
+								</li>
+								<li class="mui-table-view-cell">
+									第一个选项卡子项-3
+								</li>
+								<li class="mui-table-view-cell">
+									第一个选项卡子项-4
+								</li>
+								<li class="mui-table-view-cell">
+									第一个选项卡子项-5
+								</li>
+								<li class="mui-table-view-cell">
+									第一个选项卡子项-6
+								</li>
+								<li class="mui-table-view-cell">
+									第一个选项卡子项-7
+								</li>
+								<li class="mui-table-view-cell">
+									第一个选项卡子项-8
+								</li>
+								<li class="mui-table-view-cell">
+									第一个选项卡子项-9
+								</li>
+								<li class="mui-table-view-cell">
+									第一个选项卡子项-10
+								</li>
+								<li class="mui-table-view-cell">
+									第一个选项卡子项-11
+								</li>
+								<li class="mui-table-view-cell">
+									第一个选项卡子项-12
+								</li>
+								<li class="mui-table-view-cell">
+									第一个选项卡子项-13
+								</li>
+								<li class="mui-table-view-cell">
+									第一个选项卡子项-14
+								</li>
+								<li class="mui-table-view-cell">
+									第一个选项卡子项-15
+								</li>
+								<li class="mui-table-view-cell">
+									第一个选项卡子项-16
+								</li>
+								<li class="mui-table-view-cell">
+									第一个选项卡子项-17
+								</li>
+								<li class="mui-table-view-cell">
+									第一个选项卡子项-18
+								</li>
+								<li class="mui-table-view-cell">
+									第一个选项卡子项-19
+								</li>
+								<li class="mui-table-view-cell">
+									第一个选项卡子项-20
+								</li>
+							</ul>
+						</div>
+					</div>
 				</div>
-				<div id="sliderProgressBar" class="mui-slider-progress-bar mui-col-xs-4"></div>
-				<div class="mui-slider-group">
-					<div id="item1mobile" class="mui-slider-item mui-control-content mui-active">
-						<div id="scroll1" class="mui-scroll-wrapper">
-							<div class="mui-scroll">
-								<ul class="mui-table-view">
-									<li class="mui-table-view-cell">
-										<p class="worklog_title">第2个选项卡，title1</p>
-										<div >
-											<p class="worklog_title2 title_2_right" >content2</p>
-											<p class="worklog_title2 title_2_left" >第2个选项卡，content1 (附加大段文字adfasfdsafsfsfsfsadf)</p>
-										</div>
-									</li>
-								</ul>
+				<div id="item2mobile" class="mui-slider-item mui-control-content">
+					<div id="scroll2" class="mui-scroll-wrapper">
+						<div class="mui-scroll">
+							<div class="mui-loading">
+								<div class="mui-spinner">
+								</div>
 							</div>
 						</div>
 					</div>
-					<div id="item2mobile" class="mui-slider-item mui-control-content">
-						<div id="scroll2" class="mui-scroll-wrapper">
-							<div class="mui-scroll">
+
+				</div>
+				<div id="item3mobile" class="mui-slider-item mui-control-content">
+					<div id="scroll3" class="mui-scroll-wrapper">
+						<div class="mui-scroll">
+							<div class="mui-loading">
+								<div class="mui-spinner">
+								</div>
 							</div>
 						</div>
 					</div>
-					<div id="item3mobile" class="mui-slider-item mui-control-content">
-						<div id="scroll3" class="mui-scroll-wrapper">
-							<div class="mui-scroll">
-							</div>
-						</div>
-					</div>
+
 				</div>
 			</div>
 		</div>
+
+		</div>
 		<script src="../js/mui.js"></script>
 		<script>
+			/////////////
+			// 重新配置可滑动区域的高度
+			var headHeight = document.getElementById('sliderSegmentedControl').offsetHeight
+				+ document.getElementById('img_title_bg').offsetHeight
+				+ document.getElementById('sliderProgressBar').offsetHeight;
+			var contentHeight = document.body.offsetHeight - headHeight;
+			
+			var item1mobile = document.getElementById('item1mobile');
+			var item2mobile = document.getElementById('item2mobile');
+			var item3mobile = document.getElementById('item3mobile');
+			
+			item1mobile.style.height = contentHeight + "px";
+			item2mobile.style.height = contentHeight + "px";
+			item3mobile.style.height = contentHeight + "px";
+			/////////////
+			
 			mui.init({
 				swipeBack: false
 			});
 			(function($) {
+				$('.mui-scroll-wrapper').scroll({
+					indicators: true //是否显示滚动条
+				});
 				var html2 = '<ul class="mui-table-view"><li class="mui-table-view-cell">第二个选项卡子项-1</li><li class="mui-table-view-cell">第二个选项卡子项-2</li><li class="mui-table-view-cell">第二个选项卡子项-3</li><li class="mui-table-view-cell">第二个选项卡子项-4</li><li class="mui-table-view-cell">第二个选项卡子项-5</li></ul>';
 				var html3 = '<ul class="mui-table-view"><li class="mui-table-view-cell">第三个选项卡子项-1</li><li class="mui-table-view-cell">第三个选项卡子项-2</li><li class="mui-table-view-cell">第三个选项卡子项-3</li><li class="mui-table-view-cell">第三个选项卡子项-4</li><li class="mui-table-view-cell">第三个选项卡子项-5</li></ul>';
 				var item2 = document.getElementById('item2mobile');
 				var item3 = document.getElementById('item3mobile');
 				document.getElementById('slider').addEventListener('slide', function(e) {
 					if (e.detail.slideNumber === 1) {
-						item2.querySelector('.mui-scroll').innerHTML = html2;
-					}else if (e.detail.slideNumber === 2) {
-						item3.querySelector('.mui-scroll').innerHTML = html3;
+						if (item2.querySelector('.mui-loading')) {
+							setTimeout(function() {
+								item2.querySelector('.mui-scroll').innerHTML = html2;
+							}, 0);
+						}
+					} else if (e.detail.slideNumber === 2) {
+						if (item3.querySelector('.mui-loading')) {
+							setTimeout(function() {
+								item3.querySelector('.mui-scroll').innerHTML = html3;
+							}, 0);
+						}
 					}
 				});
 				var sliderSegmentedControl = document.getElementById('sliderSegmentedControl');
@@ -117,6 +202,7 @@
 					}
 				});
 			})(mui);
+		</script>
 		</script>
 		
 		

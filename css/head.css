@@ -1,0 +1,50 @@
+body{
+	background-color: #f0eff5;
+	background-size: cover;
+	height: 100%;
+	width: 100%;
+}
+html,body{
+	margin:0px; 
+	height:100%;
+	overflow: hidden;
+}
+
+.img_title_bg{
+	z-index: 1;
+	width: 100%;
+	height: auto;
+	
+}
+
+.layout_title .img_title_bg{
+	width: 100%;
+	height: auto;
+	min-height: 7em;
+	text-align: center;
+}
+
+.layout_relative{
+	position:relative;
+}
+.layout_absolute{
+	position:absolute
+}
+
+#img_head{
+  	width: auto;
+  	height: 4em;
+}
+
+.layout_head{
+	width: 100%;
+	text-align: center;
+	z-index: 2;
+	display: inline-block
+}
+
+.txt_name{
+	color: white;
+}
+
+
