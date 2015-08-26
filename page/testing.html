@@ -29,7 +29,7 @@
 			
 			<img id="img_title_bg" class="img_title_bg layout_absolute" src="../image/main_title.jpg" />
 			
-			<div class="layout_head layout_absolute">
+			<div id="layout_head" class="layout_head layout_absolute">
 				<a> <img id="img_head" src="../image/icon_head.png" /></a>
 				<br>
 				<a class="txt_name">超人的超</a>
@@ -153,10 +153,11 @@
 		<script>
 			/////////////
 			// 重新配置可滑动区域的高度
-			var headHeight = document.getElementById('sliderSegmentedControl').offsetHeight
-				+ document.getElementById('img_title_bg').offsetHeight
+			var titleHeight = document.getElementById('img_title_bg').offsetHeight;
+			var topHeight = document.getElementById('sliderSegmentedControl').offsetHeight
+				+ titleHeight
 				+ document.getElementById('sliderProgressBar').offsetHeight;
-			var contentHeight = document.body.offsetHeight - headHeight;
+			var contentHeight = document.body.offsetHeight - topHeight;
 			
 			var item1mobile = document.getElementById('item1mobile');
 			var item2mobile = document.getElementById('item2mobile');
@@ -165,6 +166,15 @@
 			item1mobile.style.height = contentHeight + "px";
 			item2mobile.style.height = contentHeight + "px";
 			item3mobile.style.height = contentHeight + "px";
+			
+			
+			
+			// 头像区域高度
+			var viewHead = document.getElementById('layout_head');
+			var headHeight = viewHead.offsetHeight;
+			var headMargin = (titleHeight - headHeight) / 2;
+			viewHead.style.marginTop = headMargin + "px";
+			 
 			/////////////
 			
 			mui.init({
