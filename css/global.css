@@ -16,3 +16,14 @@ html,body{
 	position:absolute
 }
 
+.machparent_width{
+	width: 100%;
+}
+.machparent_height{
+	height: 100%;
+}
+.machparent{
+	width: 100%;
+	height: 100%;
+}
+

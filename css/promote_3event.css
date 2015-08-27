@@ -1,14 +1,15 @@
 .tianqi{
-	background-color: rgba(54,54,54,0.1);
-	padding-top: 8px;padding-bottom: 8px;
-	padding-left: 10px;
 	width: 100%;
 	position: fixed;
 	z-index: 100;
 }
 
-.tianqi span{
+#data{
+	width: 100%;
 	color: #ffffff;
+	padding:8px 10px;
+	background-color: rgba(54,54,54,0.1);
+	display:inline-block;
 }
 
 .layout_content{
@@ -17,3 +18,49 @@
 	background-size: cover;
 	background-image: url(../image/strengthen_bg_4.png);
 }
+
+.txt_small{
+	color: #ffffff;
+	font-size: small;
+}
+
+.layout_foot{
+	color: #ffffff;
+	background-color: rgba(54,54,54,0.1);
+	padding-top: 10px;padding-bottom: 10px;
+	width: 100%;
+	position: fixed;
+	z-index: 100;
+	bottom: 0px;
+}
+
+.foot_table_cell{
+	width: 50%;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	text-align: center;
+}
+
+/*标签处文字底色*/
+.txt_withbg{
+	padding:2px 5px;
+	text-align: center;
+	background-color: #d57880;
+	display:inline-block;
+}
+
+.layout_events{
+	margin-top: 20px;
+}
+
+.space_20{
+	margin-top: 20px;
+}
+
+.layout_event a{
+	display: inline-block;
+	float: right;
+}
+
+
+

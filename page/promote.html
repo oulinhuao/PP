@@ -12,6 +12,7 @@
 		<link rel="stylesheet" href="../css/head.css"/>
 		<link rel="stylesheet" href="../css/promote.css"/>
 		
+		<script src="../js/global.js"></script>
 		<script src="../js/testing.js"></script>
 		
 		<style>
@@ -182,8 +183,8 @@
 				$('.mui-scroll-wrapper').scroll({
 					indicators: true //是否显示滚动条
 				});
-				var html2 = getiframe(contentHeight,'promote_3event.html');;
-				var html3 = '<iframe src="testing_negative.html" name="frame_negative" style="width: 100%;" scrolling="no"></iframe>';
+				var html2 = getiframe(contentHeight,'promote_3event.html');
+				var html3 = getiframe(contentHeight,'testing_negative.html');
 				var item2 = document.getElementById('item2mobile');
 				var item3 = document.getElementById('item3mobile');
 				document.getElementById('slider').addEventListener('slide', function(e) {

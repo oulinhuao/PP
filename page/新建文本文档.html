@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <style media="screen">
+ 
+        body{
+            margin:0px;
+        }
+ 
+ 
+        .page{
+            border:1px solid #000;
+            width:300px;
+            height:95%;
+            position:fixed;
+            _position:absolute;
+            top:0px;
+        }
+    </style>
+</head>
+<body>
+ 
+    <a href="javascript:void(0)" onclick="Divtoggle()">µã»÷µÇÂ¼</a>
+    <div class="page" id="page">
+        <span onclick="Divtoggle()">¹Ø±Õ</span>
+        <p>UserName:<input type="text" value=""></p>
+        <p>PassWord:<input type="password"  value=""></p>
+    </div>
+</body>
+</html>
+<script charset="utf-8">
+    var dom=document.getElementById("page");
+    window.onload=function()
+    {
+        dom.style.right="-305px";
+    }
+    var a=0;
+    function Divtoggle()
+    {
+        if(a==0)
+        {
+            var i=-305;
+            var s=setInterval(function(){
+                if(i>0)
+                {
+                    a=1;
+                    clearInterval(s);
+                }else
+                {
+                    dom.style.right=i+"px";
+                    i=i+10;
+                }
+            },5);
+        }else if(a==1)
+        {
+            var j=0;
+            var cs=setInterval(function(){
+                if(j<-305)
+                {
+                    a=0;
+                    clearInterval(cs);
+                }else
+                {
+                    dom.style.right=j+"px";
+                    j=j-10;
+                     
+                }
+            },5);
+ 
+        }
+    }
+</script>
