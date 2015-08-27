@@ -5,12 +5,12 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
-		<title>评测</title>
+		<title>提升</title>
 		<!--标准mui.css-->
 		<link rel="stylesheet" href="../css/mui.css"/>
 		<link rel="stylesheet" href="../css/global.css"/>
 		<link rel="stylesheet" href="../css/head.css"/>
-		<link rel="stylesheet" href="../css/testing.css"/>
+		<link rel="stylesheet" href="../css/promote.css"/>
 		
 		<script src="../js/testing.js"></script>
 		
@@ -42,10 +42,10 @@
 			<div id="layout_head" class="layout_head layout_absolute">
 				<a> <img id="img_head" src="../image/icon_head.png" /></a>
 				<br>
-				<a id="test" class="txt_name" href="promote.html">超人的超</a>
+				<a id="test" class="txt_name">超人的超</a>
 			</div>
 			
-			<a id="btn_back" class="btn_back layout_absolute" href="javascript:void(0);"  onclick="mui.back()">
+			<a id="btn_back" class="mui-action-back btn_back layout_absolute">
 				返回
 			</a>
 			
@@ -61,13 +61,13 @@
 			<div id="slider" class="mui-slider">
 				<div id="sliderSegmentedControl" class="mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
 					<a class="mui-control-item mui-active" href="#item1mobile">
-						我的性格（4）
+						心情轨迹
 					</a>
 					<a class="mui-control-item" href="#item2mobile">
-						我的正能量（8）
+						三件好事
 					</a>
 					<a class="mui-control-item" href="#item3mobile">
-						我的负能量（3）
+						树洞
 					</a>
 			</div>
 			
@@ -77,30 +77,6 @@
 					<div id="scroll1" class="mui-scroll-wrapper">
 						<div class="mui-scroll">
 							<ul class="mui-table-view">
-								<li class="mui-table-view-cell">
-									第一个选项卡子项-1
-								</li>
-								<li class="mui-table-view-cell">
-									第一个选项卡子项-2
-								</li>
-								<li class="mui-table-view-cell">
-									第一个选项卡子项-3
-								</li>
-								<li class="mui-table-view-cell">
-									第一个选项卡子项-4
-								</li>
-								<li class="mui-table-view-cell">
-									第一个选项卡子项-5
-								</li>
-								<li class="mui-table-view-cell">
-									第一个选项卡子项-6
-								</li>
-								<li class="mui-table-view-cell">
-									第一个选项卡子项-7
-								</li>
-								<li class="mui-table-view-cell">
-									第一个选项卡子项-8
-								</li>
 								<li class="mui-table-view-cell">
 									第一个选项卡子项-9
 								</li>
@@ -202,30 +178,12 @@
 			mui.init({
 				swipeBack: false
 			});
-			
-			
-			
-//			mui.back = function() {
-//				mui.plusReady(function() {
-//				//仅支持竖屏显示
-//				if(plus.os.name === 'Android'){
-//					plus.android.runtimeMainActivity().finish();
-//				}else if(plus.os.name === 'iOS'){
-//					
-//				}
-//			});
-//				
-//			};
-			
-			
 			(function($) {
 				$('.mui-scroll-wrapper').scroll({
 					indicators: true //是否显示滚动条
 				});
 				var html2 = '<ul class="mui-table-view"><li class="mui-table-view-cell">第二个选项卡子项-1</li><li class="mui-table-view-cell">第二个选项卡子项-2</li><li class="mui-table-view-cell">第二个选项卡子项-3</li><li class="mui-table-view-cell">第二个选项卡子项-4</li><li class="mui-table-view-cell">第二个选项卡子项-5</li></ul>';
-				var html3 = '<iframe id="testing_negative" src="testing_negative.html" name="frame_negative" style="width: 100%;" height="'
-					+ contentHeight
-					+'px"></iframe>';
+				var html3 = '<iframe src="testing_negative.html" name="frame_negative" style="width: 100%;" scrolling="no"></iframe>';
 				var item2 = document.getElementById('item2mobile');
 				var item3 = document.getElementById('item3mobile');
 				document.getElementById('slider').addEventListener('slide', function(e) {
@@ -254,14 +212,6 @@
 				
 			})(mui);
 			
-			function iFrameHeight() {   
-				var ifm= document.getElementById("testing_negative");   
-				var subWeb = document.frames ? document.frames["testing_negative"].document : ifm.contentDocument;   
-				if(ifm != null && subWeb != null) {
-				   ifm.height = subWeb.body.scrollHeight;
-				   ifm.width = subWeb.body.scrollWidth;
-				}   
-			} 
 			
 		</script>
 		</script>

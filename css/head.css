@@ -1,20 +1,7 @@
-body{
-	background-color: #f0eff5;
-	background-size: cover;
-	height: 100%;
-	width: 100%;
-}
-html,body{
-	margin:0px; 
-	height:100%;
-	overflow: hidden;
-}
-
 .img_title_bg{
 	z-index: 1;
 	width: 100%;
 	height: auto;
-	
 }
 
 .layout_title .img_title_bg{
@@ -40,6 +27,13 @@ html,body{
 	width: 100%;
 	text-align: center;
 	z-index: 2;
+	display: inline-block
+}
+
+.btn_back{
+	margin-top: 1em;
+	margin-left: 10px;
+	z-index: 10;
 	display: inline-block
 }
 

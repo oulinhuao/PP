@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<title>提升</title>
+		<!--标准mui.css-->
+		<link rel="stylesheet" href="../css/mui.css"/>
+		<link rel="stylesheet" href="../css/global.css"/>
+		
+		<script src="../js/testing.js"></script>
+		
+		<style>
+		</style>
+	</head>
+	<body>
+		
+		<div id="layout_title" class="layout_data">
+			<a id="data" href="#"></a>
+			
+		<div />	
+			
+		
+		<script type="text/javascript">
+		  var today = new Date();
+		  var date = today.getDate();
+		  var day = today.getDay();
+		  var month = today.getMonth() + 1;
+		  var year = today.getFullYear();
+		  
+		  var week = "星期日";
+		  if(day==0){
+		  	week = "星期日";
+		  } else if(day==0){
+		  	week = "星期日";
+		  }
+		  switch(day){
+		  	case 0:
+		  		week = "星期日";
+		  	break;
+		  	case 1:
+		  		week = "星期一";
+		  	break;
+		  	case 2:
+		  		week = "星期二";
+		  	break;
+		  	case 3:
+		  		week = "星期三";
+		  	break;
+		  	case 4:
+		  		week = "星期四";
+		  	break;
+		  	case 5:
+		  		week = "星期五";
+		  	break;
+		  	case 6:
+		  		week = "星期六";
+		  	break;
+		  }
+		  
+		  document.getElementById('data').innerText = "今天是"+year + "年" + month + "月" + date + "日　"+ week;
+		 </script>
+		
+	</body>
+
+</html>
