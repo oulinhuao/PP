@@ -11,13 +11,6 @@
 	text-align: center;
 }
 
-.layout_relative{
-	position:relative;
-}
-.layout_absolute{
-	position:absolute
-}
-
 #img_head{
   	width: auto;
   	height: 4em;

@@ -13,6 +13,7 @@
 		<link rel="stylesheet" href="../css/testing.css"/>
 		
 		<script src="../js/testing.js"></script>
+		<script src="../js/global.js"></script>
 		
 		<style>
 			.mui-control-content {
@@ -223,9 +224,11 @@
 					indicators: true //是否显示滚动条
 				});
 				var html2 = '<ul class="mui-table-view"><li class="mui-table-view-cell">第二个选项卡子项-1</li><li class="mui-table-view-cell">第二个选项卡子项-2</li><li class="mui-table-view-cell">第二个选项卡子项-3</li><li class="mui-table-view-cell">第二个选项卡子项-4</li><li class="mui-table-view-cell">第二个选项卡子项-5</li></ul>';
-				var html3 = '<iframe id="testing_negative" src="testing_negative.html" name="frame_negative" style="width: 100%;" height="'
-					+ contentHeight
-					+'px"></iframe>';
+//				var html3 = '<iframe id="testing_negative" src="testing_negative.html" name="frame_negative" style="width: 100%;" height="'
+//					+ contentHeight
+//					+'px"></iframe>';
+					
+				var html3 =	getiframe(contentHeight,'testing_negative.html');
 				var item2 = document.getElementById('item2mobile');
 				var item3 = document.getElementById('item3mobile');
 				document.getElementById('slider').addEventListener('slide', function(e) {

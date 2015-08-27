@@ -9,3 +9,10 @@ html,body{
 	overflow: hidden;
 }
 
+.layout_relative{
+	position:relative;
+}
+.layout_absolute{
+	position:absolute
+}
+
