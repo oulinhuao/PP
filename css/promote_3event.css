@@ -1,7 +1,7 @@
-.tianqi{
-	width: 100%;
+.layout_data{
 	position: fixed;
-	z-index: 100;
+  	top: 0;
+  	left: 0;
 }
 
 #data{
@@ -26,18 +26,17 @@
 
 .layout_foot{
 	color: #ffffff;
-	background-color: rgba(54,54,54,0.1);
+	background-color: rgba(54,54,54,0.35);
 	padding-top: 10px;padding-bottom: 10px;
 	width: 100%;
-	position: fixed;
-	z-index: 100;
-	bottom: 0px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
 }
 
 .foot_table_cell{
 	width: 50%;
-	padding-top: 20px;
-	padding-bottom: 20px;
 	text-align: center;
 }
 
@@ -49,18 +48,62 @@
 	display:inline-block;
 }
 
-.layout_events{
+.layout_bookmark{
+	margin-left: 10px;
+	display: block;
+}
+.bookmark{
+	color: white;
+	margin-bottom: 10px;
+	font-size: 16px;
+}
+.layout_content{
+	overflow: auto;
+}
+.layout_controller{
+	padding-bottom: 200px;
+	padding-top: 50px;
+}
+
+.layout_event{
 	margin-top: 20px;
+	display: block;
+	clear: both;
+	color: #787d80;
 }
 
 .space_20{
-	margin-top: 20px;
+	padding-top: 20px;
 }
 
-.layout_event a{
+.write_content_bg{
+	padding-top: 20px;
+	float: right;
+	max-width: 60%;
+}
+
+/*写 按钮*/
+.write_bg{
+	width: 80px;
+	height: 80px;
+	background-image: url(../image/icon_number_red.png);
+	background-size: cover;
+	text-align: center;
 	display: inline-block;
 	float: right;
+	right: 0;
+	padding-top: 30px;
 }
 
+.msg{
+	border-radius: 15px;
+	border: 0px;
+	background-color:rgba(204,204,204,0.8);
+	padding: 10px;
+	display: inline-block;
+	font-size: 20px;
+	color: #205392;
+	word-break:break-all;
+}
 
 

@@ -1,6 +1,6 @@
 <!--三件好事-->
 <!DOCTYPE html>
-<html>
+<html ng-app>
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
@@ -12,35 +12,57 @@
 		<link rel="stylesheet" href="../css/global.css"/>
 		<link rel="stylesheet" href="../css/promote_3event.css"/>
 		
+		<script src="../js/angular.js"></script>
+		<script src="../js/global.js"></script>
 		<script src="../js/testing.js"></script>
 		
-		<style>
-		</style>
 	</head>
 	<body>
-		
 		<div class="layout_content">
-			<!--天气-->
-			<div id="layout_title" class="layout_data tianqi layout_absolute" >
+			<div id="layout_title" class="layout_data machparent_width" >
 				<span id="data" class="txt_small"></span>
-			<div />	
+			</div>
 			
-			<div >
+			<div class="layout_controller">
 				<div class="layout_event space_20 machparent_width">
-					<a href="#"><img src="../image/icon_head.png"/></a>
-				<div />
+					<div class="write_bg" ng-click="showinput = !showinput">
+						<span style="font-size: 30px;">1</span>
+					</div>
+					
+					<div class="write_content_bg">
+						<textarea ng-show="showinput"  id='msg_text' type="text" class='input-text' ng-model="input_content_1"></textarea>
+						<span ng-hide="showinput" class="msg">{{input_content_1 || 'adsf'}}</span>
+					</div>
+					
+				</div>
+				
 				<div class="layout_event space_20 machparent_width">
-				<div />
+					<div class="write_bg">
+						<span style="font-size: 30px;">2</span>
+					</div>
+				</div>
+				
 				<div class="layout_event space_20 machparent_width">
-				<div />
-			<div />
-			
+					<div class="write_bg">
+						<span style="font-size: 30px;">3</span>
+					</div>
+				</div>
+			</div>
 			
 			<!--标签-->
-			<div id="layout_foot" class="layout_foot layout_absolute">
-				<div>
-					<span style="font-size:16px;margin-left: 10px;">标签</span>
-				<div />
+			<div id="layout_foot" class="layout_foot">
+				<table class="layout_bookmark" border="0px" cellspacing="0px" cellpadding="0px" class="width_machparent">
+					<tr >
+						<th>
+							<img src="../image/icon_bookmark.png" width="20px" height="20px" style="margin-top: 2px; margin-right: 4px;">
+						</th>
+						</th>
+						<th>
+							<span class="bookmark">标签</span>
+						</th>
+					</tr>
+				</table>
+				
 				<table border="0px" cellspacing="0px" cellpadding="0px" class="foot_table width_machparent">
 					<tr >
 						<th class="foot_table_cell">
@@ -48,56 +70,41 @@
 							<span >&nbsp;&nbsp;</span>
 							<span id="txt_scole" class="txt_withbg">5分</span>
 						</th>
-						<th class="foot_table_line" style="width: 1px; background-color: #FFFFFF;">
+						<th class="foot_table_line" style="width: 2px; background-color: #FFFFFF;">
 						</th>
-						<th class="foot_table_cell">
-							<span style="color: #882d28;">看看朋友>></span>
+						<th class="foot_table_cell" style="text-align:center;vertical-align:middle">
+							<table class="layout_bookmark" border="0px" cellspacing="0px" cellpadding="0px" class="width_machparent">
+								<tr >
+									<th>
+										<img src="../image/icon_people.png" width="50px" height="40px" style="margin-top: 2px; margin-right: 4px;">
+									</th>
+									</th>
+									<th>
+										<span style="color: #882d28;" style="display:inline-block;padding-bottom: 10px;">看看朋友>></span>
+									</th>
+								</tr>
+							</table>
 						</th>
 					</tr>
 				</table>
-			<div />	
+			</div>
 			
 		</div>	
 		
 		<script type="text/javascript">
-		  var today = new Date();
-		  var date = today.getDate();
-		  var day = today.getDay();
-		  var month = today.getMonth() + 1;
-		  var year = today.getFullYear();
+		  document.getElementById('data').innerText = getDate() + "  " + getWeek();
 		  
-		  var week = "星期日";
-		  if(day==0){
-		  	week = "星期日";
-		  } else if(day==0){
-		  	week = "星期日";
-		  }
-		  switch(day){
-		  	case 0:
-		  		week = "星期日";
-		  	break;
-		  	case 1:
-		  		week = "星期一";
-		  	break;
-		  	case 2:
-		  		week = "星期二";
-		  	break;
-		  	case 3:
-		  		week = "星期三";
-		  	break;
-		  	case 4:
-		  		week = "星期四";
-		  	break;
-		  	case 5:
-		  		week = "星期五";
-		  	break;
-		  	case 6:
-		  		week = "星期六";
-		  	break;
-		  }
 		  
-		  document.getElementById('data').innerText = "今天是"+year + "年" + month + "月" + date + "日　"+ week;
-		 </script>
+		  function VisibleController1($scope) {
+		        $scope.visible = false;
+		        $scope.toggle = function () {
+		            $scope.visible = !$scope.visible;
+		        }
+		    }
+		  
+		  
+		  
+	 	</script>
 		
 	</body>
 
