@@ -86,7 +86,6 @@
 .write_bg{
 	width: 80px;
 	height: 80px;
-	background-image: url(../image/icon_number_gray.png);
 	background-size: cover;
 	text-align: center;
 	display: inline-block;
@@ -94,6 +93,16 @@
 	right: 0;
 	padding-top: 30px;
 }
+/*写 按钮,编辑状态*/
+.ctrl_edit{
+	background-image: url(../image/icon_number_gray.png);
+}
+/*写 按钮,内容状态*/
+.ctrl_num{
+	background-image: url(../image/icon_number_red.png);
+}
+
+
 
 .msg{
 	border-radius: 15px;
