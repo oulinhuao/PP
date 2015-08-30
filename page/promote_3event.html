@@ -15,6 +15,8 @@
 		<script src="../js/angular.js"></script>
 		<script src="../js/global.js"></script>
 		<script src="../js/testing.js"></script>
+		<script src="../js/location.js"></script>
+		<script src="../js/promote_3event.js"></script>
 		
 	</head>
 	<body>
@@ -24,14 +26,15 @@
 			</div>
 			
 			<div class="layout_controller">
-				<div class="layout_event space_20 machparent_width">
+				<!--好事1-->
+				<div id="event1" class="layout_event space_20 machparent_width">
 					<div class="write_bg" ng-click="showinput = !showinput">
 						<span style="font-size: 30px;">1</span>
 					</div>
 					
 					<div class="write_content_bg">
-						<textarea ng-show="showinput"  id='msg_text' type="text" class='input-text' ng-model="input_content_1"></textarea>
-						<span ng-hide="showinput" class="msg">{{input_content_1 || 'adsf'}}</span>
+						<textarea id='msg_input1' ng-show="showinput" maxlength="40" rows="1"  type="text" class='input-text' ng-model="input_content_1"></textarea>
+						<span id='msg_show1' ng-hide="showinput" class="msg">{{input_content_1 || 'adsf'}}</span>
 					</div>
 					
 				</div>
@@ -94,15 +97,7 @@
 		<script type="text/javascript">
 		  document.getElementById('data').innerText = getDate() + "  " + getWeek();
 		  
-		  
-		  function VisibleController1($scope) {
-		        $scope.visible = false;
-		        $scope.toggle = function () {
-		            $scope.visible = !$scope.visible;
-		        }
-		    }
-		  
-		  
+//		  var loginApp = angular.module("event1", []);
 		  
 	 	</script>
 		

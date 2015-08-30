@@ -67,7 +67,7 @@
 
 .layout_event{
 	margin-top: 20px;
-	display: block;
+	/*display: none;*/
 	clear: both;
 	color: #787d80;
 }
@@ -86,7 +86,7 @@
 .write_bg{
 	width: 80px;
 	height: 80px;
-	background-image: url(../image/icon_number_red.png);
+	background-image: url(../image/icon_number_gray.png);
 	background-size: cover;
 	text-align: center;
 	display: inline-block;

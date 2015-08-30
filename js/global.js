@@ -9,7 +9,7 @@ function getiframe(height,url){
 					+ url
 					+ '" name="frame_negative" style="width: 100%;" height="'
 					+ height
-					+ 'px"></iframe>'
+					+ 'px" onload="Javascript:SetWinHeight(this)" ></iframe>'
 }
 
 /**
@@ -21,6 +21,17 @@ function getDate(){
 	var month = today.getMonth() + 1;
 	var year = today.getFullYear();
 	return year + "年" + month + "月" + date + "日";
+}
+
+/**
+ * 获取日期字符串yyyy-mm-dd
+ */
+function getDate2(){
+	var today = new Date();
+	var date = today.getDate();
+	var month = today.getMonth() + 1;
+	var year = today.getFullYear();
+	return year + "-" + month + "-" + date;
 }
 
 /**
@@ -59,3 +70,19 @@ function getWeek(){
 	}
 	return week;
 }
+
+
+function SetWinHeight(obj) 
+{ 
+var win=obj; 
+if (document.getElementById) 
+{ 
+if (win && !window.opera) 
+{ 
+if (win.contentDocument && win.contentDocument.body.offsetHeight) 
+win.height = win.contentDocument.body.offsetHeight; 
+else if(win.Document && win.Document.body.scrollHeight) 
+win.height = win.Document.body.scrollHeight; 
+} 
+} 
+} 
