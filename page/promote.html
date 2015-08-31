@@ -38,21 +38,29 @@
 		
 		<div id="layout_title" class="layout_title">
 			
-			<img id="img_title_bg" class="img_title_bg layout_absolute" src="../image/main_title.jpg" />
-			
 			<div id="layout_head" class="layout_head layout_absolute">
 				<a> <img id="img_head" src="../image/icon_head.png" /></a>
 				<br>
-				<a id="test" class="txt_name">超人的超</a>
+				<a id="test" href="javascript:" class="txt_name">超人的超</a>
 			</div>
 			
 			<a id="btn_back" class="mui-action-back btn_back layout_absolute">
 				返回
 			</a>
 			
+			<img src="../image/icon_promote_left.png" class="icon_left"/>
+			<table  border="0px" cellspacing="0px" cellpadding="0px" class="layout_icon_right">
+				<tr><th>
+					<div class="icon_right_msg">
+						<span class="text_right_msg"" >
+							6
+						</span>
+					</div>
+					
+				</th></tr>
+				<tr><td><img height="50%" src="../image/icon_promote_right.png" /></td></tr>
+			</table>
 		</div>
-		<!--占位-->
-		<img class="img_title_bg" src="../image/main_title.jpg" />
 		
 		<div id="layout_space" style="height: 10px;">
 		</div>
@@ -77,44 +85,6 @@
 				<div id="item1mobile" class="mui-slider-item mui-control-content mui-active">
 					<div id="scroll1" class="mui-scroll-wrapper">
 						<div class="mui-scroll">
-							<ul class="mui-table-view">
-								<li class="mui-table-view-cell">
-									第一个选项卡子项-9
-								</li>
-								<li class="mui-table-view-cell">
-									第一个选项卡子项-10
-								</li>
-								<li class="mui-table-view-cell">
-									第一个选项卡子项-11
-								</li>
-								<li class="mui-table-view-cell">
-									第一个选项卡子项-12
-								</li>
-								<li class="mui-table-view-cell">
-									第一个选项卡子项-13
-								</li>
-								<li class="mui-table-view-cell">
-									第一个选项卡子项-14
-								</li>
-								<li class="mui-table-view-cell">
-									第一个选项卡子项-15
-								</li>
-								<li class="mui-table-view-cell">
-									第一个选项卡子项-16
-								</li>
-								<li class="mui-table-view-cell">
-									第一个选项卡子项-17
-								</li>
-								<li class="mui-table-view-cell">
-									第一个选项卡子项-18
-								</li>
-								<li class="mui-table-view-cell">
-									第一个选项卡子项-19
-								</li>
-								<li class="mui-table-view-cell">
-									第一个选项卡子项-20
-								</li>
-							</ul>
 						</div>
 					</div>
 				</div>
@@ -148,7 +118,7 @@
 		<script>
 			/////////////
 			// 重新配置可滑动区域的高度
-			var titleHeight = document.getElementById('img_title_bg').offsetHeight;
+			var titleHeight = document.getElementById('layout_title').offsetHeight;
 			var topHeight = document.getElementById('sliderSegmentedControl').offsetHeight
 				+ titleHeight
 				+ document.getElementById('sliderProgressBar').offsetHeight;
@@ -183,6 +153,10 @@
 				$('.mui-scroll-wrapper').scroll({
 					indicators: true //是否显示滚动条
 				});
+				
+				var html1 = getiframe(contentHeight,'promote_calendar.html');
+				item1mobile.querySelector('.mui-scroll').innerHTML = html1;
+				
 				var html2 = getiframe(contentHeight,'promote_3event.html');
 				var html3 = getiframe(contentHeight,'testing_negative.html');
 				var item2 = document.getElementById('item2mobile');

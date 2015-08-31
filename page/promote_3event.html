@@ -1,6 +1,6 @@
 <!--三件好事-->
 <!DOCTYPE html>
-<html ng-app>
+<html >
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
@@ -15,25 +15,28 @@
 		<script src="../js/angular.js"></script>
 		<script src="../js/global.js"></script>
 		<script src="../js/testing.js"></script>
+		<script src="../js/location.js"></script>
+		<script src="../js/promote_3event.js"></script>
 		
 	</head>
 	<body>
 		<div class="layout_content">
 			<div id="layout_title" class="layout_data machparent_width" >
-				<span id="data" class="txt_small"></span>
+				<span id="data" class="txt_small" ng-controller='sd'></span>
 			</div>
 			
-			<div class="layout_controller">
-				<div class="layout_event space_20 machparent_width">
-					<div class="write_bg" ng-click="showinput = !showinput">
-						<span style="font-size: 30px;">1</span>
+			<div class="layout_controller" ng-app='event'>
+				<!--好事1-->
+				<div id="event1" ng-controller="event1" class="layout_event space_20 machparent_width">
+					<!--序号、按钮-->
+					<div class="write_bg" ng-click="switchState()" ng-class="{true: 'ctrl_num', false: 'ctrl_edit'}[state == 2]">
+						<span ng-show="state == 2" style="font-size: 30px;">1</span>
 					</div>
-					
+					<!--输入框/内容-->
 					<div class="write_content_bg">
-						<textarea ng-show="showinput"  id='msg_text' type="text" class='input-text' ng-model="input_content_1"></textarea>
-						<span ng-hide="showinput" class="msg">{{input_content_1 || 'adsf'}}</span>
+						<textarea id='msg_input1' ng-show="state == 1" ng-model="contentMsg" maxlength="40" rows="1"  type="text" class='input-text'></textarea>
+						<span id='msg_show1' ng-show="contentMsg && state == 2" class="msg">{{contentMsg}}</span>
 					</div>
-					
 				</div>
 				
 				<div class="layout_event space_20 machparent_width">
@@ -94,14 +97,42 @@
 		<script type="text/javascript">
 		  document.getElementById('data').innerText = getDate() + "  " + getWeek();
 		  
+//		  var loginApp = angular.module("event1", []);
 		  
-		  function VisibleController1($scope) {
-		        $scope.visible = false;
-		        $scope.toggle = function () {
-		            $scope.visible = !$scope.visible;
-		        }
-		    }
+		  // 好事应用
+		  var eventApp = angular.module("event",[]);
 		  
+		  // 好事1
+		  eventApp.controller('event1',function($scope){
+		  	// 状态，
+		  	// 0 初始状态，只有一个按钮，按钮显示编辑
+		  	// 1 编辑状态，显示输入框，可以输入文字
+		  	// 2 内容状态，已经包含内容，直接显示内容，而输入框不可见
+		  	$scope.state = 0;
+		  	
+		  	// 定义一个重置方法，
+		  	$scope.reset = function(){
+		  		$scope.state = 0;
+		  		$scope.contentMsg = '';
+//		  		$scope.state = 2; // 目前为测试，默认显示内容
+//		  		$scope.contentMsg = "今天跑了三公里，很爽";
+		  	}
+		  	
+		  	// 切换状态的函数
+		  	$scope.switchState = function(){
+		  		if($scope.state != 1){
+		  			// 不论哪种状态，点击按钮都置为编辑状态
+		  			$scope.state = 1
+		  		}else{
+		  			// 有内容则为内容状态,否则为默认
+		  			$scope.contentMsg ? $scope.state = 2 : $scope.state = 0;
+		  		}
+		  	}
+		  	
+		  	// 调用一次方法，给内容赋值
+		  	$scope.reset();
+		  	
+		  });
 		  
 		  
 	 	</script>
