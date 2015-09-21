@@ -12,17 +12,14 @@
 		<link rel="stylesheet" href="../css/global.css"/>
 		<link rel="stylesheet" href="../css/promote_3event.css"/>
 		
-		<script src="../js/angular.js"></script>
-		<script src="../js/global.js"></script>
-		<script src="../js/testing.js"></script>
-		<script src="../js/location.js"></script>
-		<script src="../js/promote_3event.js"></script>
+		
 		
 	</head>
 	<body>
 		<div class="layout_content">
-			<div id="layout_title" class="layout_data machparent_width" >
-				<span id="data" class="txt_small" ng-controller='sd'></span>
+			<!--日期、天气-->
+			<div id="layout_title" class="layout_date machparent_width" >
+				<span id="data" class="txt_small"></span>
 			</div>
 			
 			<div class="layout_controller" ng-app='event'>
@@ -93,6 +90,12 @@
 			</div>
 			
 		</div>	
+		
+		<script src="../js/angular.js"></script>
+		<script src="../js/global.js"></script>
+		<script src="../js/testing.js"></script>
+		<script src="../js/location.js"></script>
+		<script src="../js/promote_3event.js"></script>
 		
 		<script type="text/javascript">
 		  document.getElementById('data').innerText = getDate() + "  " + getWeek();
